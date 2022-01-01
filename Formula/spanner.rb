@@ -13,4 +13,8 @@ class Spanner < Formula
       end
     end
   end
+
+  test do
+    system "#{bin}/echo a test would go here"
+  end
 end

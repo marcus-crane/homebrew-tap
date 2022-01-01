@@ -1,4 +1,4 @@
-iclass Spanner < Formula
+class Spanner < Formula
   desc "A small utility for visualising Datadog traces locally"
   homepage "https://utf9k.net"
   version "1.0.0"

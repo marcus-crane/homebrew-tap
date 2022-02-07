@@ -5,21 +5,21 @@
 class Khinsider < Formula
   desc "Easily fetch videogame soundtracks from downloads.khinsider.com"
   homepage "https://utf9k.net"
-  version "2.0.2"
+  version "2.0.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/marcus-crane/khinsider/releases/download/v2.0.2/khinsider_2.0.2_darwin_amd64.tar.gz"
-      sha256 "dd517291b66771252973be9dd1e6de800be937218edb6208c1247ed6d4fb1e0f"
+    if Hardware::CPU.arm?
+      url "https://github.com/marcus-crane/khinsider/releases/download/v2.0.3/khinsider_2.0.3_darwin_arm64.tar.gz"
+      sha256 "2563300bff87b3928e61e5c750281327171f56f21bcd2ec35005f3f9804b29b2"
 
       def install
         bin.install "khinsider"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/marcus-crane/khinsider/releases/download/v2.0.2/khinsider_2.0.2_darwin_arm64.tar.gz"
-      sha256 "40beaec8d921a939bed8103fba319a9a13b9a75059b6df558dda3d7ded88c57e"
+    if Hardware::CPU.intel?
+      url "https://github.com/marcus-crane/khinsider/releases/download/v2.0.3/khinsider_2.0.3_darwin_amd64.tar.gz"
+      sha256 "40b45d62e6c02ea09fb07c618a4795b0040239b00d62f51be8071260c28eb288"
 
       def install
         bin.install "khinsider"
@@ -28,17 +28,17 @@ class Khinsider < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/marcus-crane/khinsider/releases/download/v2.0.2/khinsider_2.0.2_linux_arm64.tar.gz"
-      sha256 "025a97761073e7783242c6cfe983a5d35328a85837fdd533385ac329d3bec4e2"
+    if Hardware::CPU.intel?
+      url "https://github.com/marcus-crane/khinsider/releases/download/v2.0.3/khinsider_2.0.3_linux_amd64.tar.gz"
+      sha256 "c7f3d0f1985e474f8f31f2ac324f30075d2710fa4f7ca3c45a19615dbaf06ae8"
 
       def install
         bin.install "khinsider"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/marcus-crane/khinsider/releases/download/v2.0.2/khinsider_2.0.2_linux_amd64.tar.gz"
-      sha256 "60ce2cd80d327dce30ac5b7e4cb9e94eccb416d78517dee868b6cb287a747ce3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/marcus-crane/khinsider/releases/download/v2.0.3/khinsider_2.0.3_linux_arm64.tar.gz"
+      sha256 "7a20552247cda5f2d911d96c52eb3a00eac03e51c1ff8cfd96cb671b1c74847c"
 
       def install
         bin.install "khinsider"

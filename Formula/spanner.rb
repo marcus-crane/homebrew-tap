@@ -5,21 +5,21 @@
 class Spanner < Formula
   desc "A minimal tool for visualising Datadog traces"
   homepage "https://github.com/marcus-crane/spanner"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/marcus-crane/spanner/releases/download/v1.0.1/spanner_1.0.1_darwin_arm64.tar.gz"
-      sha256 "80c3044cdb5df6fb2de6f5233cb5e6925fdcf336caa4173e45a2ca1cc77c2c84"
+      url "https://github.com/marcus-crane/spanner/releases/download/v1.0.2/spanner_1.0.2_darwin_arm64.tar.gz"
+      sha256 "c1bc7d00867b7933fd83c3cd36834dec90146c4b9a75ced5236de3d8b44af182"
 
       def install
         bin.install "spanner"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/marcus-crane/spanner/releases/download/v1.0.1/spanner_1.0.1_darwin_amd64.tar.gz"
-      sha256 "2bb929c966d7805d47efacee0d83e4ca67c87db6091326a892ae68cc8ad904d0"
+      url "https://github.com/marcus-crane/spanner/releases/download/v1.0.2/spanner_1.0.2_darwin_amd64.tar.gz"
+      sha256 "a0619df8c7e158866795ffa7efb85bd907417932fddaf3a296934bb93e86622d"
 
       def install
         bin.install "spanner"
@@ -29,16 +29,16 @@ class Spanner < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/marcus-crane/spanner/releases/download/v1.0.1/spanner_1.0.1_linux_arm64.tar.gz"
-      sha256 "c596fb89b90bffb5591edf361e54ac2cf94f417caac7da24a276b3cef0e98bd4"
+      url "https://github.com/marcus-crane/spanner/releases/download/v1.0.2/spanner_1.0.2_linux_arm64.tar.gz"
+      sha256 "d21c03009b568950cc104d55fcf216dcc4d49fd4ad0da8b1bb063fca6987518e"
 
       def install
         bin.install "spanner"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/marcus-crane/spanner/releases/download/v1.0.1/spanner_1.0.1_linux_amd64.tar.gz"
-      sha256 "dbc0bb1a6104263371c0a5898a703c56eb5b18f1a2fb85c9ebde73140f072136"
+      url "https://github.com/marcus-crane/spanner/releases/download/v1.0.2/spanner_1.0.2_linux_amd64.tar.gz"
+      sha256 "6573aaf6f49b4f4bacc39342febc29d3c88283497bd4e76904e0527c101d666d"
 
       def install
         bin.install "spanner"
